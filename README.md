@@ -77,8 +77,11 @@ Install and execution instructions:
  - localhost: 127.0.0.1:27017
  - Username: -
  - password: -
+ 
 **Execution** 
+
 - Intial the MongoDB
+
 **For P1 and P2**
 - Run the DB_Initial_(1,2)_Parent-Referencing
 - Then, Run the P1.1 or P1.2
