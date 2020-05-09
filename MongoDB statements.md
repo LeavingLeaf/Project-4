@@ -2,13 +2,17 @@
 ## Problem 1
 
 Initialize 
+
 > use Peoplemongodb
+
 switched to db Peoplemongodb
+
 > db
+
 Peoplemongodb
-> db
-Peoplemongodb
+
 > db.createCollection("famous-people")
+
 { "ok" : 1 }
 
 
