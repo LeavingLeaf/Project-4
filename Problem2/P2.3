@@ -1,6 +1,6 @@
 Question 2c:
 
-> db['famous-people'].aggregate([{$group:{ _id:{year: {$cond :[{ $ifNull :['$birth', 0]}, {$year:"$birth"},"records without $birth"]}}, record_ids:{$addToSet:"$_id"}} }]);
+> db['famous-people'].aggregate([{$group:{ _id:{year: {$cond :[{ $ifNull :['$birth', 0]}, {$year:"$birth"},"record names without $birth"]}}, record_ids:{$addToSet:"$_id"}} }]);
 { "_id" : { "year" : 1911 }, "record_ids" : [ 30 ] }
 { "_id" : { "year" : 1931 }, "record_ids" : [ 5 ] }
 { "_id" : { "year" : 1926 }, "record_ids" : [ 4 ] }
@@ -10,7 +10,7 @@ Question 2c:
 { "_id" : { "year" : 1956 }, "record_ids" : [ 6 ] }
 { "_id" : { "year" : 1941 }, "record_ids" : [ ObjectId("51e062189c6ae665454e301d") ] }
 { "_id" : { "year" : 1965 }, "record_ids" : [ 8 ] }
-{ "_id" : { "year" : "records without $birth" }, "record_ids" : [ 10 ] }
+{ "_id" : { "year" : "record names without $birth" }, "record_ids" : [ 10 ] }
 { "_id" : { "year" : 1955 }, "record_ids" : [ 9 ] }
 { "_id" : { "year" : 1927 }, "record_ids" : [ 100 ] }
 > 
