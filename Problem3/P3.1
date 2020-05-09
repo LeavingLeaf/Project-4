@@ -1,0 +1,17 @@
+var ancestors = [];
+var level = 1;
+var Temp = [];
+stack = [];
+var item =db.test.findOne({_id:"dbm"});
+var parents = db.test.findOne({_id:item.parent});
+
+while (parents!= null){
+    Temp.push(parents._id)
+    Temp.push("level:"+level)
+    ancestors.push(Temp)
+    Temp =[]
+
+    parents = db.test.findOne({_id:parents.parent})
+    level = level + 1
+}
+ancestors
