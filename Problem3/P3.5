@@ -1,0 +1,13 @@
+var ancestors = [];
+var item = db.test2.findOne({_id:"Databases"});
+var parents = db.test2.findOne({children:item._id});
+var silblings = []
+
+for(var i=0; i<parents.children.length; i=i+1){
+    if(parents.children[i] != item._id){
+        silblings.push(parents.children[i])
+    }
+}
+
+silblings
+
