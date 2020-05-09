@@ -1,0 +1,35 @@
+Question 2.2:
+
+Solution 1:
+
+> db['famous-people'].mapReduce( function() { if(this.awards!=null) for(x=0;x<this.awards.length;x++) emit(this.awards[x].award," "+[this.awards[x].year]);}, function(key,values){return Array.sum(values)}, {out:"award"})
+{
+	"result" : "award",
+	"timeMillis" : 86,
+	"counts" : {
+		"input" : 12,
+		"emit" : 28,
+		"reduce" : 7,
+		"output" : 17
+	},
+	"ok" : 1
+}
+> db.award.find();
+{ "_id" : "Award for the Advancement of Free Software", "value" : " 2001 2011" }
+{ "_id" : "Computer Sciences Man of the Year", "value" : " 1969" }
+{ "_id" : "Distinguished Fellow", "value" : " 1973" }
+{ "_id" : "Draper Prize", "value" : " 1993" }
+{ "_id" : "IEEE John von Neumann Medal", "value" : " 2001 2001" }
+{ "_id" : "Japan Prize", "value" : " 2011" }
+{ "_id" : "Kyoto Prize", "value" : " 1988" }
+{ "_id" : "NLUUG Award", "value" : " 2003" }
+{ "_id" : "National Medal of Science", "value" : " 1975 1990" }
+{ "_id" : "National Medal of Technology", "value" : " 1991 1998" }
+{ "_id" : "Officer of the Order of Canada", "value" : " 2007" }
+{ "_id" : "Rosing Prize", "value" : " 1999 1999" }
+{ "_id" : "The Economist Innovation Award", "value" : " 2002" }
+{ "_id" : "Turing Award", "value" : " 1977 2001 2001 1983 1971 1960" }
+{ "_id" : "W. W. McDowell Award", "value" : " 1976" }
+{ "_id" : "W.W. McDowell Award", "value" : " 1967" }
+{ "_id" : "WPI Award", "value" : " 1999 1999" }
+> 
