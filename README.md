@@ -211,7 +211,7 @@ Install and execution instructions:
  - add child_id to decendant
  - stack.push child
 ### P3.5 
-- quert the "item" where “_id == Databases”
+- query the "item" where “_id == Databases”
 - query the "parents" where "children = Databases"
 - output the "siblings" from children of the "parents" when children != "item"
 ## References:
