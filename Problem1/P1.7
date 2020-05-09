@@ -1,0 +1,14 @@
+Question 1.7:
+
+> db['famous-people'].find({'name.first':"Mary",'name.last':"Sally"},{contribs:1}). forEach(function(x){ x.contribs.forEach(function(c) { myIds = db['famous-people'].find({'contribs':c}); print('{ Contribution: '+ "" + c + "", '}'); print('People : [');  myIds.forEach(function(myId) { print('{first:' +myId.name.first + ',last : ' + myId.name.last + '}'); }); print(']}'); }) });
+{ Contribution: C++ }
+People : [
+{first:Mary,last : Sally}
+{first:Ming,last : Zhang}
+]}
+{ Contribution: Simula }
+People : [
+{first:Kristen,last : Nygaard}
+{first:Ole-Johan,last : Dahl}
+{first:Mary,last : Sally}
+]}
