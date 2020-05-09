@@ -1,0 +1,41 @@
+Question 1.1:
+> myId=db['famous-people'].findOne({"_id" : ObjectId("51df07b094c6acd67e492f41")});
+{
+	"_id" : ObjectId("51df07b094c6acd67e492f41"),
+	"name" : {
+		"first" : "John",
+		"last" : "McCarthy"
+	},
+	"birth" : ISODate("1927-09-04T04:00:00Z"),
+	"death" : ISODate("2011-12-24T05:00:00Z"),
+	"contribs" : [
+		"Lisp",
+		"Artificial Intelligence",
+		"ALGOL"
+	],
+	"awards" : [
+		{
+			"award" : "Turing Award",
+			"year" : 1971,
+			"by" : "ACM"
+		},
+		{
+			"award" : "Kyoto Prize",
+			"year" : 1988,
+			"by" : "Inamori Foundation"
+		},
+		{
+			"award" : "National Medal of Science",
+			"year" : 1990,
+			"by" : "National Science Foundation"
+		}
+	]
+}
+> db['famous-people'].remove({'_id':myId._id});
+WriteResult({ "nRemoved" : 1 })
+> myId._id=100;
+100
+> db['famous-people'].insert(myId);
+WriteResult({ "nInserted" : 1 })
+db['famous-people'].find({"_id" :100});
+{ "_id" : 100, "name" : { "first" : "John", "last" : "McCarthy" }, "birth" : ISODate("1927-09-04T04:00:00Z"), "death" : ISODate("2011-12-24T05:00:00Z"), "contribs" : [ "Lisp", "Artificial Intelligence", "ALGOL" ], "awards" : [ { "award" : "Turing Award", "year" : 1971, "by" : "ACM" }, { "award" : "Kyoto Prize", "year" : 1988, "by" : "Inamori Foundation" }, { "award" : "National Medal of Science", "year" : 1990, "by" : "National Science Foundation" } ] }
