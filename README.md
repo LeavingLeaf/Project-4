@@ -68,9 +68,11 @@ Install and execution instructions:
 
 ## Problem 3
 Install and execution instructions:
+
 **Environment**
  - MongoDB shell: v4.2.6
  - OS: Microsoft Windsow 10
+ 
 **Construction Method**
 
  - Intial the MongoDB as a Local net Server
