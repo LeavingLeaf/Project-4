@@ -46,7 +46,7 @@ Install and execution Instructions:
 
 Install and execution instructions: 
 
--- Used Mongodb with Hadoop.
+ -- Used Mongodb with Hadoop.
 
 -- Started the Mongo shell with the command 'mongo' and 'mongod'.
 
