@@ -1,0 +1,17 @@
+Question 1.10:
+
+> myId=db['famous-people'].findOne({_id:3}, {contribs:1});
+{
+	"_id" : 3,
+	"contribs" : [
+		"UNIVAC",
+		"compiler",
+		"FLOW-MATIC",
+		"COBOL"
+	]
+}
+
+> db['famous-people'].update({_id:30},{"$push":{"contribs":myId.contribs}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db['famous-people'].find({"_id":30});
+{ "_id" : 30, "name" : { "first" : "Ming", "last" : "Zhang" }, "birth" : ISODate("1911-04-12T04:00:00Z"), "death" : ISODate("2000-11-07T04:00:00Z"), "contribs" : [ "C++", "FP", "Python", [ "UNIVAC", "compiler", "FLOW-MATIC", "COBOL" ] ], "awards" : [ { "award" : "WPI Award", "year" : "1999", "by" : "WPI" }, { "award" : "Turing Award", "year" : 1960, "by" : "ACM" } ] }
