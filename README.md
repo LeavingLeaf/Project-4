@@ -20,15 +20,15 @@ Where:
 
 Install and execution Instructions:
 
--- Used Mongodb with Hadoop.
+ -Used Mongodb with Hadoop.
 
--- Started the Mongo shell with the command 'mongo' and 'mongod'.
+ -Started the Mongo shell with the command 'mongo' and 'mongod'.
 
--- Created a Database 'Peoplemongodb' and a collection 'famous-people' inside the database.
+ -Created a Database 'Peoplemongodb' and a collection 'famous-people' inside the database.
 
--- Inserted 10 documents to this collection from the link https://docs.mongodb.com/manual/reference/bios-example-collection/.
+ -Inserted 10 documents to this collection from the link https://docs.mongodb.com/manual/reference/bios-example-collection/.
 
--- Performed CRUD Operations on the documents.
+ -Performed CRUD Operations on the documents.
 
 
 ### P1.1
@@ -46,17 +46,17 @@ Install and execution Instructions:
 
 Install and execution instructions: 
 
- -- Used Mongodb with Hadoop.
+  - Used Mongodb with Hadoop.
 
--- Started the Mongo shell with the command 'mongo' and 'mongod'.
+ - Started the Mongo shell with the command 'mongo' and 'mongod'.
 
--- Created a Database 'Peoplemongodb' and a collection 'famous-people' inside the database.
+  - Created a Database 'Peoplemongodb' and a collection 'famous-people' inside the database.
 
--- Inserted 10 documents to this collection from the link https://docs.mongodb.com/manual/reference/bios-example-collection/.
+ -Inserted 10 documents to this collection from the link https://docs.mongodb.com/manual/reference/bios-example-collection/.
 
--- Grouped documents in a collection and performed aggregation functions like count and sum.
+ -Grouped documents in a collection and performed aggregation functions like count and sum.
 
--- Performed text search in MongoDB using a text index and $text operator.
+ -Performed text search in MongoDB using a text index and $text operator.
 
 
 ### P2.1
