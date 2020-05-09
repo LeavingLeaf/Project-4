@@ -1,0 +1,6 @@
+Question 1.9:
+
+> db['famous-people'].update({_id:30, 'awards.by':'WPI'},{$set:{'awards.$.year':'1999'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db['famous-people'].find({"_id":30});
+{ "_id" : 30, "name" : { "first" : "Ming", "last" : "Zhang" }, "birth" : ISODate("1911-04-12T04:00:00Z"), "death" : ISODate("2000-11-07T04:00:00Z"), "contribs" : [ "C++", "FP", "Python" ], "awards" : [ { "award" : "WPI Award", "year" : "1999", "by" : "WPI" }, { "award" : "Turing Award", "year" : 1960, "by" : "ACM" } ] }
