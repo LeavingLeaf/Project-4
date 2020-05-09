@@ -69,7 +69,6 @@ Install and execution instructions:
 ## Problem 3
 Install and execution instructions:
 **Environment**
-
  - MongoDB shell: v4.2.6
  - OS: Microsoft Windsow 10
 **Construction Method**
@@ -79,7 +78,7 @@ Install and execution instructions:
  - Username: -
  - password: -
 **Execution** 
-- Intial the MongoDB**
+- Intial the MongoDB
 **For P1 and P2**
 - Run the DB_Initial_(1,2)_Parent-Referencing
 - Then, Run the P1.1 or P1.2
