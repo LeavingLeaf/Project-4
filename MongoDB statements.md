@@ -39,7 +39,12 @@ Peoplemongodb
  db['famous-people'].find({"_id":20});
  
  db['famous-people'].find({"_id":30});
-
+ 
+ **Report all documents of people whogot a “Turing Award” after 1940.**
+ 
+ myId=db['famous-people'].find({awards:{$elemMatch: {award:'Turing Award', year:{$gt:1940}}}});
+ 
+ 
 ## Problem 2
 ## Problem 3
 ### Environment
