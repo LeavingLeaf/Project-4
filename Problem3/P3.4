@@ -1,0 +1,16 @@
+var descendants = [];
+var stack = [];
+var item =db.test2.findOne({_id:"Books"});
+stack.push(item);
+
+while(stack.length >= 1){
+    var current = stack.pop();
+    var Children =db.test2.find({_id: {$in : current.children}});
+        while (Children.hasNext() == true){
+            var child = Children.next();
+            descendants.push(child._id);
+            stack.push(child)
+        }
+}
+
+descendants
