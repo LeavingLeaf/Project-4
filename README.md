@@ -68,14 +68,31 @@ Install and execution instructions:
 
 ## Problem 3
 Install and execution instructions:
-
+- Environment
+ - MongoDB shell: v4.2.6
+ - OS: Microsoft Windsow 10
+- Construction Method
+ - Intial the MongoDB as a Local net Server
+ - localhost: 127.0.0.1:27017
+ - Username: -
+ - password: -
 ### P3.1
-Using
+- query the "item" where “_id = MongoDB”,
+- query the parent of the "item", save to "parents"
+- Add the _id of parents to "ancestors"
+ - using a while loop to do the 2 process above, until the "Parents" is null, which means this is the top of the tree.
 ### P3.2
+- Count the Up-level using the "Ancestors" method
+- Count the Donw-level using the "Descendants" method
+- Add them together minus the overlap, get the height of the tree.
 ### P3.3
+- query the "item" where "children = dbm"
 ### P3.4
 
+### P3.5 
+- quert the "item" where “_id == Databases”
+- query the "parents" where "children = Databases"
+- output the "siblings" from children of the "parents" when children != "item"
 ## References:
-
  - https://docs.mongodb.com/manual/reference/
  - https://stackoverflow.com/questions
