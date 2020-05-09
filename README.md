@@ -68,7 +68,6 @@ Install and execution instructions:
 
 ## Problem 3
 Install and execution instructions:
-
 **Environment**
 
  - MongoDB shell: v4.2.6
@@ -79,7 +78,14 @@ Install and execution instructions:
  - localhost: 127.0.0.1:27017
  - Username: -
  - password: -
- ** Execution** 
+**Execution** 
+- Intial the MongoDB**
+**For P1 and P2**
+- Run the DB_Initial_(1,2)_Parent-Referencing
+- Then, Run the P1.1 or P1.2
+**For P3, P4, and P5**
+- Run the DB_Initial_(3,4,5)_Child-Referencing
+- Then, Run the P1.3, P1.4, or P1.5
 ### P3.1
 - query the "item" where “_id = MongoDB”;
 - query the parent of the "item", save to "parents"
