@@ -1,0 +1,36 @@
+var item =db.test.findOne({_id:"Database"});
+
+var level_UP = 1;
+var parents = db.test.findOne({_id:item.parent});
+
+while (parents!= null){
+    parents = db.test.findOne({_id:parents.parent})
+    level_UP = level_UP + 1
+}
+level_UP = level_UP
+
+
+var level_Down = 1;
+var stack = [];
+var MultiCheck = 0;
+stack.push(item);
+
+while(stack.length >= 1){
+    var current = stack.pop();
+    var children =db.test.find({parent:current._id});
+
+        while (children.hasNext() == true){
+            var child = children.next();
+            MultiCheck = stack.push(child);
+                if(MultiCheck>1)
+                {
+                    level_Down = level_Down - MultiCheck + 1;
+                }
+        }
+        level_Down = level_Down + 1 ;
+}
+level_Down = level_Down - MultiCheck;
+
+var level = level_UP + level_Down
+
+level
