@@ -20,13 +20,13 @@ Peoplemongodb
 
 Write an operation(s) that changes the _id of  “John McCarthy” to value  100.
 
-> myId=db['famous-people'].findOne({"_id" : ObjectId("51df07b094c6acd67e492f41")});
+ myId=db['famous-people'].findOne({"_id" : ObjectId("51df07b094c6acd67e492f41")});
 
-> db['famous-people'].remove({'_id':myId._id});
+ db['famous-people'].remove({'_id':myId._id});
 
-> myId._id=100;
+ myId._id=100;
 
-> db['famous-people'].insert(myId);
+ db['famous-people'].insert(myId);
 
  db['famous-people'].find({"_id" :100});
 
