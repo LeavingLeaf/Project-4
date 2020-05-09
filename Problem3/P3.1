@@ -2,7 +2,7 @@ var ancestors = [];
 var level = 1;
 var Temp = [];
 stack = [];
-var item =db.test.findOne({_id:"dbm"});
+var item =db.test.findOne({_id:"MongoDB"});
 var parents = db.test.findOne({_id:item.parent});
 
 while (parents!= null){
