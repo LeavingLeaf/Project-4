@@ -135,3 +135,8 @@ db['famous-people'].find({$text: {$search: "Turing National Medal"}})
   - localhost: 127.0.0.1:27017
   - Username: - 
   - password: -
+  
+  
+  ### References
+  - https://docs.mongodb.com/manual/reference/
+  - https://stackoverflow.com/questions
