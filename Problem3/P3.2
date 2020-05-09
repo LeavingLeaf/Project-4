@@ -1,4 +1,4 @@
-var item =db.test.findOne({_id:"Database"});
+var item =db.test.findOne({_id:"Books"});
 
 var level_UP = 1;
 var parents = db.test.findOne({_id:item.parent});
@@ -7,7 +7,7 @@ while (parents!= null){
     parents = db.test.findOne({_id:parents.parent})
     level_UP = level_UP + 1
 }
-level_UP = level_UP
+level_UP
 
 
 var level_Down = 1;
@@ -34,3 +34,8 @@ level_Down = level_Down - MultiCheck;
 var level = level_UP + level_Down
 
 level
+
+/*********************Result*****************************************/
+> level
+4
+>
