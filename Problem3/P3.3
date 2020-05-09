@@ -4,9 +4,19 @@ var parents = db.test2.findOne({children:item._id});
 var Parent = parents._id
 Parent
 
+/************************Result*****************************/
+> Parent
+Databases
+>
+
+
 
 while (parents != null){
     ancestors.push(parents._id)
     parents = db.test2.findOne({children:parents._id})
 }
 ancestors
+
+/**************************Result*********************************/
+> ancestors
+[ "Databases", "Programming", "Books" ]
