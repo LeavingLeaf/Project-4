@@ -156,21 +156,9 @@ db['famous-people'].find().sort({_id:1}).limit(1);
 db['famous-people'].find().sort({_id:-1}).limit(1);
 
 ### P2.5
-**Report the document with the smallest and largest _ids. You may first want to find the values of the smallest and largest, and then report their corresponding documents.**
+**Search for and report all documents containing either “Turing” as text substring. (Hint:  Use $text operator to represent the string search).**
 
-Solution 1:
-
-db['famous-people'].aggregate([{"$group":{"_id":null, "max":{"$max":"$_id"}, "min":{"$min":"$_id"} }}])
-
-db['famous-people'].find({_id: ObjectId("51e062189c6ae665454e301d")});
-
-db['famous-people'].find({_id:1})
-
-Solution 2:
-
-db['famous-people'].find().sort({_id:1}).limit(1);
-
-db['famous-people'].find().sort({_id:-1}).limit(1);
+db['famous-people'].find({$text: {$search: "\"Turing Award\""}});
 
 ### P2.6
 **Search for and report all documents containing either “Turing” or “National Medal” as text substring. (Hint:  Use $text operator to represent the string search).**
