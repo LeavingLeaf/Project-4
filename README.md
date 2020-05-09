@@ -68,19 +68,23 @@ Install and execution instructions:
 
 ## Problem 3
 Install and execution instructions:
+
 **Environment**
+
  - MongoDB shell: v4.2.6
  - OS: Microsoft Windsow 10
 **Construction Method**
+
  - Intial the MongoDB as a Local net Server
  - localhost: 127.0.0.1:27017
  - Username: -
  - password: -
+ ** Execution** 
 ### P3.1
-- query the "item" where “_id = MongoDB”,
+- query the "item" where “_id = MongoDB”;
 - query the parent of the "item", save to "parents"
 - Add the _id of parents to "ancestors"
- - using a while loop to do the 2 process above, until the "Parents" is null, which means this is the top of the tree.
+- using a while loop to do the 2 process above, until the "Parents" is null, which means this is the top of the tree.
 ### P3.2
 - Count the Up-level using the "Ancestors" method
 - Count the Donw-level using the "Descendants" method
@@ -88,7 +92,13 @@ Install and execution instructions:
 ### P3.3
 - query the "item" where "children = dbm"
 ### P3.4
-
+- query the "item" where "_id = Books"
+- query the chilren of the "items"
+- store item to current
+- using the stack to recurse the following procedures:
+ - store children to child
+ - add child_id to decendant
+ - stack.push child
 ### P3.5 
 - quert the "item" where “_id == Databases”
 - query the "parents" where "children = Databases"
