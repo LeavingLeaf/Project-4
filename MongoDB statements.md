@@ -63,7 +63,8 @@ db['famous-people'].find({"_id":20});
 
 db['famous-people'].find({'name.first':"Mary",'name.last':"Sally"},{contribs:1}). forEach(function(x){ x.contribs.forEach(function(c) { myIds = db['famous-people'].find({'contribs':c}); print('{ Contribution: '+ "" + c + "", '}'); print('People : [');  myIds.forEach(function(myId) { print('{first:' +myId.name.first + ',last : ' + myId.name.last + '}'); }); print(']}'); }) });
 
-**Report all documents where the first name matches the regular expression “Jo*”, where “*” means any number of characters. Report the documents sorted by the last name.**
+**Report all documents where the first name matches the regular expression “Jo*”, where “*” means any number of characters.** 
+**Report the documents sorted by the last name.**
 
 db['famous-people'].find({'name.first':{$regex :'^Jo.*'}}).sort({'name.last':1});
 
