@@ -1,0 +1,6 @@
+Question 1.6:
+
+> myId=db['famous-people'].updateOne({'name.first':'Mary', 'name.last':'Sally'},{$push: {comments: ['taught at 2 universities', 'was an amazing pioneer', 'lived in Worcester']}});
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db['famous-people'].find({"_id":20});
+{ "_id" : 20, "name" : { "first" : "Mary", "last" : "Sally" }, "birth" : ISODate("1933-08-27T04:00:00Z"), "death" : ISODate("1984-11-07T04:00:00Z"), "contribs" : [ "C++", "Simula" ], "awards" : [ { "award" : "WPI Award", "year" : 1999, "by" : "WPI" } ], "comments" : [ [ "taught at 2 universities", "was an amazing pioneer", "lived in Worcester" ] ] }
