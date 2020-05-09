@@ -1,8 +1,8 @@
 # Project-4
-- Created by Xiao Zhang and Ashiwarya
+- Created by Xiao Zhang and Aishwarya
 ## Contribution
 
-|              Task              | Ashiwarya | Xiao zhang |
+|              Task              | Aishwarya | Xiao zhang |
 | :----------------------------: | :-------: | :--------: |
 |      1 Problem 1               |     3     |     3      |
 |      2 Problem 2               |     3     |     1      |
