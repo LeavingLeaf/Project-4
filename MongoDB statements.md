@@ -98,7 +98,7 @@ db.award.find();
 
 **Write an aggregation query that groups by the birth year, i.e., the year within the “birth” field, andreport both a total count and an array of _ids for each birth year.**
 
-db['famous-people'].aggregate([{$group:{ _id:{year: {$cond :[{ $ifNull :['$birth', 0]}, {$year:"$birth"},"records without $birth"]}}, record_ids:{$addToSet:"$_id"}} }]);
+db['famous-people'].aggregate([{$group:{ _id:{year: {$cond :[{ $ifNull :['$birth', 0]}, {$year:"$birth"},"record names without $birth"]}}, record_ids:{$addToSet:"$_id"}} }]);
 
 
 **Report the document with the smallest and largest _ids. You may first want to find the values of the smallest and largest, and then report their corresponding documents.**
