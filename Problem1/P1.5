@@ -1,0 +1,7 @@
+Question 1.5:
+
+myId=db['famous-people'].updateOne({'name.first':'Guido','name.last':'van Rossum'}, {$push: {contribs: 'Python'}});
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db['famous-people'].find({"_id":6});
+{ "_id" : 6, "name" : { "first" : "Guido", "last" : "van Rossum" }, "birth" : ISODate("1956-01-31T05:00:00Z"), "contribs" : [ "Python", "Python" ], "awards" : [ { "award" : "Award for the Advancement of Free Software", "year" : 2001, "by" : "Free Software Foundation" }, { "award" : "NLUUG Award", "year" : 2003, "by" : "NLUUG" } ] }
+> 
