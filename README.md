@@ -119,11 +119,64 @@ Install and execution instructions:
 
 
 ### P2.1
+**Write an aggregation query that groups by the award name, i.e., the “award” field inside the “awards” array, and reports the number of times each awardhas been given. (Hint: Use Map-Reduce mechanism)**
+
+db['famous-people'].mapReduce( function() { if(this.awards!=null) for(x=0;x<this.awards.length;x++) emit(this.awards[x].award,1);}, function(key,values){return Array.sum(values)}, {out:"award"})
+
+db.award.find();
+
+
 ### P2.2 
+**Write an aggregation query that groups by the award name, i.e., the “award” field inside the “awards” array, and for each award reports an array of the years for when this award has been given (Hint:   Use map-reduce or use aggregation mechanism)**
+
+db['famous-people'].mapReduce( function() { if(this.awards!=null) for(x=0;x<this.awards.length;x++) emit(this.awards[x].award," "+[this.awards[x].year]);}, function(key,values){return Array.sum(values)}, {out:"award"})
+
+db.award.find();
+
 ### P2.3 
+**Write an aggregation query that groups by the birth year, i.e., the year within the “birth” field, andreport both a total count and an array of _ids for each birth year.**
+
+db['famous-people'].aggregate([{$group:{ _id:{year: {$cond :[{ $ifNull :['$birth', 0]}, {$year:"$birth"},"record names without $birth"]}}, record_ids:{$addToSet:"$_id"}} }]);
+
 ### P2.4 
+**Report the document with the smallest and largest _ids. You may first want to find the values of the smallest and largest, and then report their corresponding documents.**
+
+Solution 1:
+
+db['famous-people'].aggregate([{"$group":{"_id":null, "max":{"$max":"$_id"}, "min":{"$min":"$_id"} }}])
+
+db['famous-people'].find({_id: ObjectId("51e062189c6ae665454e301d")});
+
+db['famous-people'].find({_id:1})
+
+Solution 2:
+
+db['famous-people'].find().sort({_id:1}).limit(1);
+
+db['famous-people'].find().sort({_id:-1}).limit(1);
+
 ### P2.5
+**Report the document with the smallest and largest _ids. You may first want to find the values of the smallest and largest, and then report their corresponding documents.**
+
+Solution 1:
+
+db['famous-people'].aggregate([{"$group":{"_id":null, "max":{"$max":"$_id"}, "min":{"$min":"$_id"} }}])
+
+db['famous-people'].find({_id: ObjectId("51e062189c6ae665454e301d")});
+
+db['famous-people'].find({_id:1})
+
+Solution 2:
+
+db['famous-people'].find().sort({_id:1}).limit(1);
+
+db['famous-people'].find().sort({_id:-1}).limit(1);
+
 ### P2.6
+**Search for and report all documents containing either “Turing” or “National Medal” as text substring. (Hint:  Use $text operator to represent the string search).**
+
+db['famous-people'].find({$text: {$search: "Turing National Medal"}})
+
 
 ## Problem 3
 Install and execution instructions:
